@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.jSelectDate.js"></script>
+    <script type="text/javascript">
+        
+        $("body").ready(function(){
+            
+            //应用方法
+            $("input.date").jSelectDate({
+                css:"date",
+                yearBeign: 1995,
+                disabled : false,
+                showLabel : true
+            });
+
+            $(".getVal").click(function(){
+                var id = $(this).attr("iid")
+                var val = $("#"+id).val()
+                alert(val)
+            })
+
+        })
+
+
+    </script>	
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="date1" class="date" value="2005-3-22" /><button class="getVal" iid="date1" >获取当前时间</button>
+        </br>
+        </br>        
+        <input type="text" id="date2" class="date" value="1995-5-2" /><button class="getVal" iid="date2"  >获取当前时间</button>
+</body>
+</html>
